@@ -16,3 +16,13 @@ class User(db.Model):
     def __repr__(self):
         return f"User({self.id}, {self.username}, {self.email})"
 
+
+class Notate(db.Model):
+    __tablename__ = 'notates'
+    id = db.Column(db.Integer, primary_key=True)
+    notate = db.Column(db.String(1000), nullable=False)
+    tag = db.Column(db.String(100), nullable=True)
+
+    def __repr__(self):
+         return f"User({self.id}, {self.notate}, {self.tag})"
+
